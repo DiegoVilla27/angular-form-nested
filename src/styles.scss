@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  height: 40px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  };
+}
+
+button {
+  display: block;
+  width: 100%;
+  background-color: #5E00EA;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 40px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  };
+}
+
+fieldset {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  legend {
+    font-weight: bold;
+  }
+}

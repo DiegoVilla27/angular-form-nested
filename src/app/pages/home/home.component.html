@@ -1,0 +1,51 @@
+<div class="home">
+  <form
+    [formGroup]="form"
+    autocomplete="off"
+  >
+    <input
+      placeholder="Name"
+      formControlName="name"
+    />
+    <nested-error-msg
+      [form]="form"
+      [list]="validations['name']"
+      [type]="'name'"
+    />
+    <input
+      placeholder="Email"
+      formControlName="email"
+    />
+    <nested-error-msg
+      [form]="form"
+      [list]="validations['email']"
+      [type]="'email'"
+    />
+    <nested-form-address
+      formGroupName="address"
+      [form]="form"
+    />
+    <nested-form-bill
+      formGroupName="bill"
+      [form]="form"
+    />
+
+    <button
+      type="submit"
+      (click)="submit()"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+
+<div class="valid">
+  VALID:
+  <div
+    class="valid-circle"
+    [ngStyle]="{ 'background-color': form.valid ? 'green' : 'red' }"
+  ></div>
+</div>
+<pre>
+  {{ form.value | json }}
+</pre>
